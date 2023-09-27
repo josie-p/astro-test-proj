@@ -1,17 +1,15 @@
 ---
+const { title = "Default Title", description = "Default Description"} = Astro.props;
 
+//component import
+import MainHead from "./MainHead.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
+	<MainHead title={ title } description={ description } />
 	<body>
-     <p>big old paragraph</p>
+     <!-- <p>big old paragraph</p> -->
+	 <slot>Default Text</slot>
 	</body>
 </html>
 
