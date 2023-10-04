@@ -3,6 +3,8 @@ const { title = "My Astro Blog", description = "My musings about the Astro frame
 
 //component import
 import MainHead from "./MainHead.astro";
+import Footer from "../components/Footer.astro";
+import Nav from "../components/Nav.astro";
 
 import "../styles/global.css";
 ---
@@ -10,9 +12,11 @@ import "../styles/global.css";
 <html lang="en">
 	<MainHead title={ title } description={ description } />
 	<body>
+		<Nav/>
 	 <slot>
 		<p>Default Text</p>
 	</slot>
+	<Footer />
 	</body>
 </html>
 
