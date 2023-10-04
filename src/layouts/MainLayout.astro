@@ -1,15 +1,18 @@
 ---
-const { title = "Default Title", description = "Default Description"} = Astro.props;
+const { title = "My Astro Blog", description = "My musings about the Astro framework"} = Astro.props;
 
 //component import
 import MainHead from "./MainHead.astro";
+
+import "../styles/global.css";
 ---
 
 <html lang="en">
 	<MainHead title={ title } description={ description } />
 	<body>
-     <!-- <p>big old paragraph</p> -->
-	 <slot>Default Text</slot>
+	 <slot>
+		<p>Default Text</p>
+	</slot>
 	</body>
 </html>
 
